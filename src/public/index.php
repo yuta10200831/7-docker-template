@@ -1,12 +1,12 @@
 <?php
 class FoodCalculator {
-    private $food;
+    private int $food;
 
-    public function __construct($food) {
+    public function __construct(int $food) {
         $this->food = $food;
     }
 
-    public function calculateNum() {
+    public function calculateNum(): int {
         if ($this->food % 2 === 0) {
             $num = $this->food / 2;
         } else {
@@ -26,7 +26,8 @@ $foodCalculator = new FoodCalculator($food);
 $num = $foodCalculator->calculateNum();
 echo $num;
 
-
+// 出力８
+// クラスの引数と返り値に型を指定
 
 // $food = 7;
 // $num = 0;
