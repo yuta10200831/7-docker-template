@@ -1,12 +1,12 @@
 <?php
 class NumberChecker {
-  private $num;
+  private int $num;
 
-  public function __construct($num) {
+  public function __construct(int $num) {
     $this->num = $num;
   }
 
-  public function checkMultiples() {
+  public function checkMultiples(): string {
     if ($this->num % 12 === 0 && $this->num % 24 === 0) {
         return "numの値は12の倍数かつ、24の倍数です";
     } elseif ($this->num % 12 === 0) {
